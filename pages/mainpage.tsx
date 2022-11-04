@@ -1,14 +1,15 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function MainPage() {
-    const [objects, setObjects] = useState(2);
+    const [objects, setObjects] = useState("2");
     const [values, setValues] = useState(1);
     const paramsArray = [1, 9, 19, 50, 99, 999];
-    function handleChangeObjects(evt) {
+    function handleChangeObjects(evt: React.ChangeEvent<HTMLInputElement>) {
         setObjects(evt.target.value)
     }
-    function handleChangeValues(evt) {
-        setValues(paramsArray[evt.target.value])
+    function handleChangeValues(evt: React.ChangeEvent<HTMLInputElement>) {
+        const value = parseInt(evt.target.value);
+        setValues(paramsArray[value])
     }
     return (
         <>
