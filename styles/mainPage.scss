@@ -12,9 +12,20 @@
   src: url("../fonts/Calibri.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Calibri-400.woff") format("woff");
+}
+
 $gradient: linear-gradient(198.7deg, #7f75f0 -40.02%, #101f32 96.22%);
 $font_title: "Helvetica", sans-serif;
 $font_values: "Calibri", sans-serif;
+
+body {
+  margin: 0;
+}
 
 .mainpage {
   background-image: url(../images/layout-main.png);
@@ -78,6 +89,7 @@ $font_values: "Calibri", sans-serif;
   margin: 0 auto;
   padding: 0;
   font-family: $font_values;
+  font-weight: 700;
 }
 
 .menu__parameters_objects {
@@ -102,6 +114,7 @@ $font_values: "Calibri", sans-serif;
 
 .select__button {
   font-family: $font_values;
+  font-weight: 700;
   font-size: 32px;
   line-height: 39px;
   color: #423f45;
